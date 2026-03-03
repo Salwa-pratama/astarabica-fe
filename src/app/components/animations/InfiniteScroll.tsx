@@ -29,7 +29,7 @@ const InfiniteScroll = () => {
 
   return (
     <div
-      className="absolute  ml-auto right-0  top-0 h-180.5 overflow-hidden flex justify-center "
+      className="absolute  ml-auto right-0  top-0 h-175 lg:h-180.5 overflow-hidden flex justify-center "
       style={{ width: "fit-content" }}
     >
       <div
@@ -40,7 +40,7 @@ const InfiniteScroll = () => {
         {items.map((i) => (
           <h1
             key={i}
-            className="text-7xl text-zinc-400 font-bold whitespace-nowrap"
+            className="text-2xl lg:text-7xl text-zinc-400 font-bold whitespace-nowrap"
             style={{
               writingMode: "vertical-rl",
               transform: "rotate(180deg)",

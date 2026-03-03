@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useRef } from "react";
 import InfiniteScroll from "./components/animations/InfiniteScroll";
 import Stats from "./components/page/Stats";
 import Image from "next/image";
@@ -8,21 +7,31 @@ import herosImg from "../../assets/hero.png";
 export default function Index() {
   return (
     <>
-      {/* INFINTE SCROLL */}
       <InfiniteScroll />
+
       {/* Section 1 */}
-      <div className=" w-full h-162.5 overflow-hidden px-10 flex">
-        {/* Hero section */}
-        <div className=" w-full flex flex-col p-15 gap-5 ">
-          <h1 className="text-7xl font-bold w-140">
-            Crafting moment of pure coffe bliss
+      <div className="w-full h-162.5 overflow-hidden flex relative ">
+        {/* Background image mobile — behind text, opacity rendah */}
+        <div className="absolute inset-0 md:hidden">
+          <Image
+            src={herosImg}
+            fill
+            className="object-cover object-center opacity-15"
+            alt="Black series : Americano"
+          />
+        </div>
+
+        {/* Hero text */}
+        <div className="relative z-10 w-full flex flex-col p-8 md:p-15 gap-5">
+          <h1 className="font-bold leading-tight w-full md:w-140 text-4xl sm:text-5xl md:text-7xl">
+            Crafting moment of pure{" "}
+            <span className="text-yellow-800"> coffee bliss </span>
           </h1>
-          <p className="text-2xl  w-117.5 ">
+          <p className="text-base sm:text-lg md:text-2xl w-full md:w-117.5">
             Bangunkan mood dan tingkatkan produktivitas kalian dengan segelas
             americano
           </p>
-          {/* Button */}
-          <div className="flex gap-10">
+          <div className="flex flex-wrap gap-4 md:gap-10">
             <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 duration-500">
               <div className="translate-x-0 opacity-100 transition group-hover:-translate-x-[150%] group-hover:opacity-0">
                 Go to Menu
@@ -41,7 +50,7 @@ export default function Index() {
                     fill="currentColor"
                     fillRule="evenodd"
                     clipRule="evenodd"
-                  ></path>
+                  />
                 </svg>
               </div>
             </button>
@@ -50,26 +59,26 @@ export default function Index() {
                 Scroll down
               </div>
               <div className="absolute inline-flex h-12 w-full translate-y-full items-center justify-center text-neutral-50 transition duration-500 group-hover:translate-y-0">
-                <span className="absolute h-full w-full translate-y-full skew-y-12 scale-y-0 bg-blue-500 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"></span>
+                <span className="absolute h-full w-full translate-y-full skew-y-12 scale-y-0 bg-yellow-800 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"></span>
                 <span className="z-10">Hover me</span>
               </div>
             </button>
           </div>
-          {/* Stats */}
           <Stats />
         </div>
-        {/* Image hero section */}
-        <div className=" w-full relative">
+
+        {/* Image — normal di desktop, hidden di mobile */}
+        <div className="hidden lg:block w-full relative ">
           <Image
             src={herosImg}
             fill
             className="object-cover"
             alt="Black series : Americano"
-          ></Image>
+          />
         </div>
       </div>
 
-      <div className="h-162.5  border bg-black text-white">hello </div>
+      <div className="h-162.5 border bg-black text-white">hello</div>
     </>
   );
 }
