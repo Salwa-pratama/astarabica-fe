@@ -1,1 +1,17 @@
 @import "tailwindcss";
+@keyframes seamless-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+.ticker-track {
+  animation: seamless-up 12s linear infinite;
+  will-change: transform;
+}
+.ticker-item {
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
