@@ -1,6 +1,6 @@
 import { memo, useRef, useEffect } from "react";
 
-const InfiniteScroll = () => {
+const InfiniteScrollSec2 = () => {
   const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const InfiniteScroll = () => {
 
   return (
     <div
-      className="absolute  ml-auto right-0  top-0 h-175 lg:h-180.5 overflow-hidden flex justify-center "
+      className="absolute  mr-auto left-0  top-0 h-162.5 lg:h-162.5 overflow-hidden flex justify-center "
       style={{ width: "fit-content" }}
     >
       <div
@@ -40,14 +40,14 @@ const InfiniteScroll = () => {
         {items.map((i) => (
           <h1
             key={i}
-            className="text-2xl lg:text-7xl text-yellow-800/50 font-bold whitespace-nowrap"
+            className="text-2xl lg:text-7xl text-zinc-400 font-bold whitespace-nowrap"
             style={{
               writingMode: "vertical-rl",
-              transform: "rotate(180deg)",
+              transform: "rotate(0deg)",
               whiteSpace: "nowrap",
             }}
           >
-            A S T A R A B I C A
+            G O O D V I B E S
           </h1>
         ))}
       </div>
@@ -55,4 +55,4 @@ const InfiniteScroll = () => {
   );
 };
 
-export default memo(InfiniteScroll);
+export default memo(InfiniteScrollSec2);

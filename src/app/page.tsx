@@ -3,6 +3,7 @@ import InfiniteScroll from "./components/animations/InfiniteScroll";
 import Stats from "./components/page/Stats";
 import Image from "next/image";
 import herosImg from "../../assets/hero.png";
+import Section2 from "./components/sections/home/Section2";
 
 export default function Index() {
   return (
@@ -72,13 +73,13 @@ export default function Index() {
           <Image
             src={herosImg}
             fill
-            className="object-cover"
+            className="object-cover "
             alt="Black series : Americano"
           />
         </div>
       </div>
-
-      <div className="h-162.5 border bg-black text-white">hello</div>
+      {/* Section 2 */}
+      <Section2 />
     </>
   );
 }

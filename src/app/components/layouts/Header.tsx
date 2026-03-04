@@ -46,15 +46,17 @@ const Header = () => {
   };
 
   return (
-    <header className="flex w-full  items-center justify-between px-6 md:px-10 py-3 backdrop-blur-md bg-white/60 border-white/20 sticky top-0 z-50">
+    <header className="flex w-full  items-center justify-between px-6 md:px-10 py-3  sticky top-0 z-50">
       {/* Logo */}
-      <Image
-        src={logo}
-        alt="Logo"
-        width={200}
-        height={100}
-        className="object-contain"
-      />
+      <div className="border rounded-3xl bg-white/60 backdrop-blur-md ">
+        <Image
+          src={logo}
+          alt="Logo"
+          width={200}
+          height={100}
+          className="object-contain border"
+        />
+      </div>
 
       {/* Desktop Nav */}
       <ul
