@@ -2,7 +2,11 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
 
-const Blob = ({ containerStyle }) => {
+type BloobProps = {
+  containerStyle?: string;
+};
+
+const Blob = ({ containerStyle }: BloobProps) => {
   return (
     <div className={containerStyle}>
       <svg viewBox="-10 0 200 200" xmlns="http://www.w3.org/2000/svg">
