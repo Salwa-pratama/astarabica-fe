@@ -48,7 +48,7 @@ const Header = () => {
   return (
     <header className="flex w-full  items-center justify-between px-6 md:px-10 py-3  sticky top-0 z-50">
       {/* Logo */}
-      <div className="border rounded-3xl bg-white/60 backdrop-blur-md ">
+      <div className="border border-gray-300 rounded-3xl bg-white/60 backdrop-blur-md ">
         <Image
           src={logo}
           alt="Logo"

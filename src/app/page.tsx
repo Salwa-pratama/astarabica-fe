@@ -9,9 +9,8 @@ export default function Index() {
   return (
     <>
       <InfiniteScroll />
-
       {/* Section 1 */}
-      <div className="w-full h-162.5 overflow-hidden flex relative ">
+      <div className="w-full h-162.5 overflow-hidden flex relative p-4">
         {/* Background image mobile — behind text, opacity rendah */}
         <div className="absolute inset-0 md:hidden">
           <Image
@@ -23,8 +22,8 @@ export default function Index() {
         </div>
 
         {/* Hero text */}
-        <div className="relative z-10 w-full flex flex-col p-8 md:p-15 gap-5">
-          <h1 className="font-bold leading-tight w-full md:w-140 text-4xl sm:text-5xl md:text-7xl">
+        <div className="relative z-10 w-full flex flex-col p-8 md:p-15 gap-2">
+          <h1 className="font-bold leading-none w-full md:w-140 text-4xl sm:text-5xl md:text-7xl">
             Crafting moment of pure{" "}
             <span className="text-yellow-800"> coffee bliss </span>
           </h1>

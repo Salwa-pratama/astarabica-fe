@@ -18,7 +18,7 @@ const InfiniteScroll = () => {
       }
     `;
     document.head.appendChild(styleEl);
-    track.style.animation = "seamless-up 40s linear infinite";
+    track.style.animation = "seamless-up 180s linear infinite";
 
     return () => {
       document.head.removeChild(styleEl);
